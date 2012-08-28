@@ -25,7 +25,7 @@ To alleviate the ho-hum repetitive nature of continuously entering comments, con
 
 * Use a Table of Contents (TOC) at the top of the document.
 * Add a hashtag `#` to the opening section title e.g. `#Header`.
-* Keep line-lengths sensible e.g. 80 columns.
+* Keep line-lengths short e.g. 50 columns.
 * Comments are *good*. Go crazy with them.
 * Use comments to break up CSS code logical sections
 
@@ -47,9 +47,11 @@ To alleviate the ho-hum repetitive nature of continuously entering comments, con
 	background: #fff;
 	color: #333;
 }
+
 .selector-2 {
 	background: #fff;
 	color: #333;
+}
 
 /* #Base 960 Grid
 ================================================== */
@@ -57,6 +59,7 @@ To alleviate the ho-hum repetitive nature of continuously entering comments, con
 .selector-3 {
 	display: inline-block;
 }
+
 .selector-4 {
 	background: #fff;
 	color: #333;
@@ -75,6 +78,7 @@ The first step to authoring consistent stylesheets begins with solid document st
 * Include a single space after the colon of a declaration.
 * Shorthand lowercase hex values (e.g. `#fff` not `#FFFFFF`).
 * Use single or double quotes consistently. Preference is double quotes (e.g. `content: "";` not `content: ''`).
+* Separate rulesets with a blank line.
 
 **Correct:**
 
