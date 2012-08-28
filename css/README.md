@@ -53,7 +53,7 @@ To alleviate the ho-hum repetitive nature of continuously entering comments, con
 	color: #333;
 }
 
-/* #Base 960 Grid
+/* #Section-2
 ================================================== */
 
 .selector-3 {
