@@ -67,6 +67,50 @@ An example of properly documented method method following the javadoc standard i
 ## 3. Copyrights
 
 All Java files should contain the appropiate copyright notice at the beginning of the file. 
+
+### 3.1. 47 Open Source
+
+Open Source code written in 47 Degrees that is open source is commonly released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and must be as follows.
+
+```java
+
+/*
+ * Copyright (C) {year} 47 Degrees, LLC
+ * http://47deg.com
+ * hello@47deg.com
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ ```
+
+### 3.2. 47 Propietary - Not open sourced
+
+Code owned and written for 47 Degrees not for open sourced projects must be as follows.
+
+```java
+
+/*
+ * Copyright (C) {year} 47 Degrees, LLC
+ * http://47deg.com
+ * hello@47deg.com
+ * All rights reserved
+ */
+
+ ```
+
+### 3.3. 3rd Parties
+
 Code owned and written for 3rd parties should be formatted in the following way.
 
 ```java
