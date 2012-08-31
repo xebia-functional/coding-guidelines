@@ -11,6 +11,7 @@ Java applications developed at [47 Degrees](http://47deg.com)  should follow the
 1. [General](#section-general)
 2. [Comments](#section-comments)
 3. [Copyrights](#section-copyrights)
+4. [Good Practices and coding habits](#section-goodpractice)
 
 <a name="section-general"></a>
 ## 1. General
@@ -118,6 +119,38 @@ Code owned and written for 3rd parties should be formatted in the following way.
  */
  ```
 
+<a name="section-goodpractice"></a>
+## 4. Good Practices and coding habits
 
+Good practice are a must at 47 Degrees. Code is periodically reviewed and both machine and human inspected to ensure code quality meets standards within the company.
 
+### 4.1. Design and use interfaces wherever possible
 
+**Correct:**
+
+```java
+/**
+ * Defines the contract for the user related operations 
+ * @see User
+ */
+ public interface UserService {
+ }
+
+ /**
+ * Implements the UserService connecting and saving the user to the database
+ * @see UserService
+ */
+ public class LocalUserServiceImpl implements UserService {
+ }
+```
+
+**Incorrect:**
+
+```java
+ /**
+ * Implements the UserService connecting and saving the user to the database
+ * @see UserService
+ */
+ public class UserService {
+ }
+```
