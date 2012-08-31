@@ -51,3 +51,12 @@ An example of properly documented method method following the javadoc standard i
 ```
 
 **Incorrect:**
+
+```java
+
+ // creates a user
+ public User createUser(String name) {
+ 	User user = new User(); // a new user is always created
+ 	user.setName(name);
+ 	return user;
+ }
