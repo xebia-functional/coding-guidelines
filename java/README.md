@@ -9,8 +9,8 @@ Java applications developed at [47 Degrees](http://47deg.com)  should follow the
 ## Table of Contents
 
 1. [General](#section-general)
-2. [Spring](#section-comments)
-3. [Android](#section-format)
+2. [Comments](#section-comments)
+3. [Copyrights](#section-copyrights)
 
 <a name="section-general"></a>
 ## 1. General
@@ -60,3 +60,30 @@ An example of properly documented method method following the javadoc standard i
  	user.setName(name);
  	return user;
  }
+
+ ```
+
+<a name="section-copyrights"></a>
+## 3. Copyrights
+
+All Java files should contain the appropiate copyright notice at the beginning of the file. 
+Code owned and written for 3rd parties should be formatted in the following way.
+
+```java
+
+/*
+ * Copyright (C) {year} {3rdPartyName}
+ * {3rdPartUrl}
+ * All rights reserved
+ * Developed for {3rdPartyName} by:
+ *
+ * 47 Degrees, LLC
+ * http://47deg.com
+ * hello@47deg.com
+ */
+
+ ```
+
+
+
+
