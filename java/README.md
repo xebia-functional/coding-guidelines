@@ -30,7 +30,6 @@ An example of properly documented method method following the javadoc standard i
 **Correct:**
 
 ```java
-
 /**
  * Returns a user object that can be stored in the data store. 
  * The name argument must be alphanumeric. 
@@ -47,20 +46,17 @@ An example of properly documented method method following the javadoc standard i
  	user.setName(name);
  	return user;
  }
-
 ```
 
 **Incorrect:**
 
 ```java
-
  // creates a user
  public User createUser(String name) {
  	User user = new User(); // a new user is always created
  	user.setName(name);
  	return user;
  }
-
  ```
 
 <a name="section-copyrights"></a>
@@ -73,7 +69,6 @@ All Java files should contain the appropiate copyright notice at the beginning o
 Open Source code written in 47 Degrees that is open source is commonly released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and must be as follows.
 
 ```java
-
 /*
  * Copyright (C) {year} 47 Degrees, LLC
  * http://47deg.com
@@ -91,7 +86,6 @@ Open Source code written in 47 Degrees that is open source is commonly released 
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
  ```
 
 ### 3.2. 47 Propietary - Not open sourced
@@ -99,14 +93,12 @@ Open Source code written in 47 Degrees that is open source is commonly released 
 Code owned and written for 47 Degrees not for open sourced projects must be as follows.
 
 ```java
-
 /*
  * Copyright (C) {year} 47 Degrees, LLC
  * http://47deg.com
  * hello@47deg.com
  * All rights reserved
  */
-
  ```
 
 ### 3.3. 3rd Parties
@@ -114,7 +106,6 @@ Code owned and written for 47 Degrees not for open sourced projects must be as f
 Code owned and written for 3rd parties should be formatted in the following way.
 
 ```java
-
 /*
  * Copyright (C) {year} {3rdPartyName}
  * {3rdPartUrl}
@@ -125,7 +116,6 @@ Code owned and written for 3rd parties should be formatted in the following way.
  * http://47deg.com
  * hello@47deg.com
  */
-
  ```
 
 
