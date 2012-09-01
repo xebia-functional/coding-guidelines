@@ -339,3 +339,23 @@ Mirroring the natural language "if the current state is not active" rather than 
 ```java
 	active == false
 ```
+
+### 4.5. for loops Vs for-each loops
+
+When itereating over iterable elements where the current index in the iteration is not important for-each loops are preffered.
+
+**Correct:**
+
+```java
+	for (String name: names) {
+		doSomething(name);
+	}
+```
+
+**Incorrect:**
+
+```java
+	for (int i = 0; i < names.length; i++) {
+		doSomething(names[i]);
+	}	
+```
