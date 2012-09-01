@@ -323,3 +323,19 @@ public class StringUtils {
 
  }
 ```
+
+### 4.4. Boolean comparisons
+
+Mirroring the natural language "if the current state is not active" rather than "if active is not the current state"
+
+**Correct:**
+
+```java
+	!active
+```
+
+**Incorrect:**
+
+```java
+	active == false
+```
