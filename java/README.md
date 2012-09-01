@@ -359,3 +359,19 @@ When itereating over iterable elements where the current index in the iteration 
 		doSomething(names[i]);
 	}	
 ```
+
+### 4.5. String concatenation
+
+Avoid the use of + or += to concatenate strings. Use java standards for String.format, StringBuilder or other classes and methods designed for that.
+
+**Correct:**
+
+```java
+	log.debug(String.format("found %s items", amount));
+```
+
+**Incorrect:**
+
+```java
+	log.debug("found " + amount + " items");	
+```
