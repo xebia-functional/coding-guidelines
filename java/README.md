@@ -375,3 +375,38 @@ Avoid the use of + or += to concatenate strings. Use java standards designed for
 ```java
 	log.debug("found " + amount + " items");	
 ```
+
+### 4.6. Exceptions
+
+Don't swallow exception, catch those you can recover or do something about, let the rest reach their destination
+
+**Correct:**
+
+```java
+	try {
+		do();
+	} catch (SomethingWeCanHandleException ex) {
+		log.error(ex);
+		notifyUser(ex);
+	} finally {
+		cleanUp();
+	}
+```
+
+**Incorrect:**
+
+```java
+	try {
+		do();
+	} catch (Throwable ex) {
+		log.error(ex);
+	} 
+```
+
+```java
+	try {
+		do();
+	} catch (SomethingWeCanHandleException ex) {
+		//do nothing
+	} 
+```
