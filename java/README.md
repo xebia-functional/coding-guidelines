@@ -124,7 +124,7 @@ Code owned and written for 3rd parties should be formatted in the following way.
 
 Good practice are a must at 47 Degrees. Code is periodically reviewed for both machines and humans to ensure code quality meets standards within the company.
 
-### 4.1. Design and use interfaces
+### 4.1. Design for interfaces
 
 **Correct:**
 
@@ -167,4 +167,47 @@ public List<User> getFriends(User user) {
 ```java
 public ArrayList<User> getFriends(User user) {
 }
+```
+
+### 4.2. Design and Architect with clear differentiation of the Application layers.
+
+**Correct:**
+
+```java
+/**
+ * User interface or API response (Serialized to JSON or used in view technologies such as JSP)
+ */
+ public class UserResponse {
+ }
+
+ /**
+ * Handles UI interaction and communication to services (Servlets, Spring MVC Controllers, Android activities, Tapestry pages...)
+ */
+ public class UserController {
+ }
+
+ /**
+ * Implements business logic (Spring Bean Services)
+ */
+ public interface UserService {
+ }
+
+/**
+ * Handles persistence (DAO, Cassandra Persistence Adapters, JPA Persistence Adapters)
+ */
+ public interface PersistenceAdapter {
+ }
+```
+
+**Incorrect:**
+
+```java
+ /**
+ * Donwloads and sorts the interwebs in a single method
+ */
+ public class MagicClass {
+ 	void doMagic(Object... args) {
+ 		//5000 lines here
+ 	}
+ }
 ```
