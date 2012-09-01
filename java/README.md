@@ -362,7 +362,7 @@ When itereating over iterable elements where the current index in the iteration 
 
 ### 4.5. String concatenation
 
-Avoid the use of + or += to concatenate strings. Use java standards for String.format, StringBuilder or other classes and methods designed for that.
+Avoid the use of + or += to concatenate strings. Use java standards designed for that purposes such as String.format, StringBuilder, etc.
 
 **Correct:**
 
