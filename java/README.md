@@ -122,9 +122,9 @@ Code owned and written for 3rd parties should be formatted in the following way.
 <a name="section-goodpractice"></a>
 ## 4. Good Practices and coding habits
 
-Good practice are a must at 47 Degrees. Code is periodically reviewed and both machine and human inspected to ensure code quality meets standards within the company.
+Good practice are a must at 47 Degrees. Code is periodically reviewed for both machines and humans to ensure code quality meets standards within the company.
 
-### 4.1. Design and use interfaces wherever possible
+### 4.1. Design and use interfaces
 
 **Correct:**
 
@@ -152,5 +152,21 @@ Good practice are a must at 47 Degrees. Code is periodically reviewed and both m
  * @see UserService
  */
  public class UserService {
+ }
+```
+
+**Correct:**
+
+```java
+ public class User {
+ 	private List<User> friends;
+ }
+```
+
+**Incorrect:**
+
+```java
+ public class User {
+ 	private ArrayList<User> friends;
  }
 ```
