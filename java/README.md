@@ -158,15 +158,13 @@ Good practice are a must at 47 Degrees. Code is periodically reviewed for both m
 **Correct:**
 
 ```java
- public class User {
- 	private List<User> friends;
- }
+public void List<User> getFriends(User user) {
+}
 ```
 
 **Incorrect:**
 
 ```java
- public class User {
- 	private ArrayList<User> friends;
- }
+public void ArrayList<User> getFriends(User user) {
+}
 ```
