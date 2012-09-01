@@ -393,6 +393,11 @@ Don't swallow exception, catch those you can recover or do something about, let 
 	}
 ```
 
+```java
+	public void doSomething() throws SomethingSomeoneElseCanHandleException {
+	}
+```
+
 **Incorrect:**
 
 ```java
