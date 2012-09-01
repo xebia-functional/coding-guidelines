@@ -178,24 +178,87 @@ public ArrayList<User> getFriends(User user) {
  * User interface or API response (Serialized to JSON or used in view technologies such as JSP)
  */
  public class UserResponse {
+
+ 	private String name;
+
+ 	public UserResponse(User user) {
+ 		setName(user.getName());
+ 	}
+
+ 	public String getName() {
+ 		return this.name;
+ 	}
+
+ 	public void setName(String name) {
+ 		this.name = name;
+ 	}
+
  }
 
  /**
  * Handles UI interaction and communication to services (Servlets, Spring MVC Controllers, Android activities, Tapestry pages...)
  */
  public class UserController {
+
+ 	private UserService userService;
+
+ 	public UserResponse onCreateUserFormSubmit(String name) {
+ 		User user = userService.createUser(name);
+ 		return new UserResponse(user);
+ 	}
+
  }
 
  /**
  * Implements business logic (Spring Bean Services)
  */
  public interface UserService {
+
+ 	User createUser(String name);
+
+ }
+
+ /**
+ * Implements the UserService 
+ * @see UserService
+ */
+ public class LocalUserServiceImpl implements UserService {
+
+ 	private PersistenceAdapter persistenceAdapter;
+
+ 	public User createUser(String name) {
+ 		User user = new User();
+ 		user.setName(name);
+ 		persistenceAdapter.save(user);
+ 		return user;
+ 	}
+
+ }
+
+/**
+ * Entity that gets persisted to the data store
+ */
+ public class User {
+
+ 	private String name;
+
+ 	public String getName() {
+ 		return this.name;
+ 	}
+
+ 	public void setName(String name) {
+ 		this.name = name;
+ 	}
+
  }
 
 /**
  * Handles persistence (DAO, Cassandra Persistence Adapters, JPA Persistence Adapters)
  */
  public interface PersistenceAdapter {
+
+ 	void save(Object object);
+
  }
 ```
 
