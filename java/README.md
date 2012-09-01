@@ -274,3 +274,52 @@ public ArrayList<User> getFriends(User user) {
  	}
  }
 ```
+
+### 4.3. Avoid multiple return statements
+
+Multiple return statements are hard and time consuming to debug.
+
+**Correct:**
+
+```java
+ public class StringUtils {
+
+ 	public static boolean isEmpty(String string) {
+ 		return string == null || "".equals(string.trim());
+ 	}
+
+ }
+
+or
+
+public class StringUtils {
+
+ 	public static boolean isEmpty(String string) {
+ 		boolean empty = false;
+ 		if (string == null) {
+ 			empty = true;
+ 		} else if ("".equals(string.trim())) {
+ 			empty = true;
+ 		}
+ 		return empty;
+ 	}
+
+ }
+```
+
+**Incorrect:**
+
+```java
+ public class StringUtils {
+
+ 	public static boolean isEmpty(String string) {
+ 		if (string == null) {
+ 			return true;
+ 		} else if ("".equals(string.trim())) {
+ 			return true;
+ 		}
+ 		return false;
+ 	}
+
+ }
+```
