@@ -527,6 +527,11 @@ public void changeName(String name) {
 }
 ```
 
+### 4.12. Know your Java
+
+Spend some time getting to know the [core packages](http://docs.oracle.com/javase/6/docs/api/overview-summary.html) that are already part of the SDK and avoid reinventing the wheel.
+
+
 ## 5. Design Patterns
 
 Consider the use of common design patterns.
