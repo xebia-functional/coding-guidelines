@@ -569,3 +569,26 @@ public enum Options {
 String yes = "YES";
 String no = "NO";
 ```
+
+
+#### 4.9.6. Private Helpers
+
+Consider private helper methods to break down complex flows and long methods into more readable code.
+
+**Correct:**
+
+```java
+public void downloadUrlContents(String url) {
+	checkIfHostIsReachable(url);
+	saveContentsToFile(url);
+}
+```
+
+**Incorrect:**
+
+```java
+public void downloadUrlContents(String url) {
+	... complex code to see if a host is reachable
+	... complex code to turn the remote response into bytes and then serialize to disk
+}
+```
