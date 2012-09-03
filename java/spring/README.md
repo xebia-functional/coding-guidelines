@@ -13,6 +13,66 @@ Both XML and annotation based configurations are being used.
 
 ## 2. Services
 
+Spring services should always be implementations of a Service interface that hides the implementations details when being used in other services dependencies.
+Consider the following requirements. 
+
+* The application needs a UserService to manipulate User model beans. 
+* The User service should hide any dependencies it has in other services or 3rd party technologies.
+* The service implementation could be replaced at runtime via Abstract Factories or Injection through service id qualifiers.
+
+**Correct:**
+
+```java
+/**
+ * Defines the contract for the user related operations 
+ * @see User
+ */
+ public interface UserService {
+
+ 	void save(User user);
+
+ }
+
+ /**
+ * Implements the UserService utilizing the Persistence Adapter for storage persistence
+ * @see UserService
+ */
+ @Service
+ public class LocalUserServiceImpl implements UserService {
+
+ 	@Autowired
+ 	private PersistenceAdapter persistenceAdapter;
+
+ 	@Override
+ 	public void save(User user) {
+ 		persistenceAdapter.persist(user);
+ 	}
+
+ }
+```
+
+**Incorrect:**
+
+```java
+ /**
+ * Utilizes the Persistence Adapter for storage persistence
+ * @see UserService
+ */
+ @Service
+ public class UserService {
+
+ 	@Autowired
+ 	private PersistenceAdapter persistenceAdapter;
+
+ 	@Override
+ 	public void save(User user) {
+ 		persistenceAdapter.persist(user);
+ 	}
+
+ }
+```
+
+
 ## 3. AOP
 
 ## 4. Spring MVC
