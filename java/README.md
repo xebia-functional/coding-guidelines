@@ -2,40 +2,9 @@
 
 The purpose of the [47 Degrees](http://47deg.com) Java Coding Standards is to create a collaboration baseline; helpful for scenarios where many people are creating, modifying, and contributing to the same project. The end goal is unity, consistency, and the notion that a single entity worked on the project.
 
-Java applications developed at [47 Degrees](http://47deg.com) should follow the [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/codeconv-138413.html)
+Java applications developed at *47 Degrees* should follow the [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/codeconv-138413.html)
 
-[47 Degrees](http://47deg.com) uses the Java Programming Language and Java Related Technologies in different scenarios and applications. As a norm [47 Degrees](http://47deg.com)  follows industry standards and notifying of any deviation of this document from these standards will be welcomed.
-
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [Java Coding Standards](#java-coding-standards)
-	- [0. Rebel](#0-rebel)
-	- [1. General](#1-general)
-	- [2. Comments](#2-comments)
-	- [3. Copyrights](#3-copyrights)
-		- [3.1. 47 Open Source](#31-47-open-source)
-		- [3.2. 47 Propietary - Not open sourced](#32-47-propietary---not-open-sourced)
-		- [3.3. 3rd Parties](#33-3rd-parties)
-	- [4. Good Practices and coding habits](#4-good-practices-and-coding-habits)
-		- [4.1. Design for interfaces](#41-design-for-interfaces)
-		- [4.2. Design and Architect with clear differentiation of the Application layers.](#42-design-and-architect-with-clear-differentiation-of-the-application-layers)
-		- [4.3. Avoid multiple return statements](#43-avoid-multiple-return-statements)
-		- [4.4. Boolean comparisons](#44-boolean-comparisons)
-		- [4.5. for loops Vs for-each loops](#45-for-loops-vs-for-each-loops)
-		- [4.5. String concatenation](#45-string-concatenation)
-		- [4.6. Exceptions](#46-exceptions)
-		- [4.7. Collections](#47-collections)
-		- [4.8. Raw types](#48-raw-types)
-		- [4.9. Use of 'final'](#49-use-of-final)
-		- [4.10. Name return values 'result'](#410-name-return-values-result)
-		- [4.11. Consider setters and getters for field access](#411-consider-setters-and-getters-for-field-access)
-	- [5. Design Patterns](#5-design-patterns)
-		- [5.1. Abstract Factory](#51-abstract-factory)
-		- [5.2. Factory method](#52-factory-method)
-		- [5.3. Lazy Delegate Wrapper](#53-lazy-delegate-wrapper)
-		- [5.4. Singleton](#54-singleton)
-		- [5.5. Enums](#55-enums)
-		- [5.6. Private Helpers](#56-private-helpers)
+[47 Degrees](http://47deg.com) uses the Java Programming Language and Java Related Technologies in different scenarios and applications. As a norm *47 Degrees*  follows industry standards and notifying of any deviation of this document from these standards will be welcomed.
 
 ## 0. Rebel
 
@@ -50,7 +19,7 @@ Do NOT blindly obey these guidelines, use them where they make sense.
 
 Well documented Java code is as awesome as a [pizzokie](http://www.urbandictionary.com/define.php?term=pizzokie). We have all fallen victim to undocumented code; even being guilty of ignoring proper comments for our own code. Let's try and stop doing that.
 
-At [47 Degrees](http://47deg.com) comments in Java files should be written as [Doc Comments for the Javadoc Tool](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
+At *47 Degrees* comments in Java files should be written as [Doc Comments for the Javadoc Tool](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
 
 **Correct:**
 
@@ -90,7 +59,7 @@ All Java files should contain the appropiate copyright notice at the beginning o
 
 ### 3.1. 47 Open Source
 
-Open Source code written in 47 Degrees that is open source is commonly released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and must be as follows.
+Open Source code written in *47 Degrees* that is open source is commonly released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and must be as follows.
 
 ```java
 /*
@@ -112,7 +81,7 @@ Open Source code written in 47 Degrees that is open source is commonly released 
  */
  ```
 
-### 3.2. 47 Propietary - Not open sourced
+### 3.2. 47 Propietary - Not Open Source
 
 Code owned and written for 47 Degrees not for open sourced projects must be as follows.
 
@@ -142,17 +111,17 @@ Code owned and written for 3rd parties should be formatted in the following way.
  */
  ```
 
-## 4. Good Practices and coding habits
+## 4. Good Practices and Coding Habits
 
-Good practice are a must at 47 Degrees. Code is periodically reviewed for both machines and humans to ensure code quality meets standards within the company.
+Good practice are a must at *47 Degrees*. Code is periodically reviewed for both machines and humans to ensure code quality meets standards within the company.
 
 Pay special atention to the most common style errors...
 
 * classes too long
 * methods too long
 * little or no javadoc comments
-* swallowing exceptions
-* multiple return statements
+* swallow exceptions
+* multiple *return* statements
 * Overuse of arrays in place of collections
 * too much or no whitespace
 
@@ -300,7 +269,7 @@ public ArrayList<User> getFriends(User user) {
 
 ```java
  /**
- * Donwloads and sorts the interwebs in a single method
+ * Donwloads and sorts the interwebs, all in one method
  */
  public class MagicClass {
  	void doMagic(Object... args) {
@@ -309,9 +278,9 @@ public ArrayList<User> getFriends(User user) {
  }
 ```
 
-### 4.3. Avoid multiple return statements
+### 4.3. Avoid multiple 'return' statements
 
-Multiple return statements are hard and time consuming to debug.
+Multiple *return* statements are hard and time consuming to debug.
 
 **Correct:**
 
@@ -374,7 +343,7 @@ Mirroring the natural language "if the current state is not active" rather than 
 	active == false
 ```
 
-### 4.5. for loops Vs for-each loops
+### 4.5. *for* loops Vs *for-each* loops
 
 When itereating over iterable elements where the current index in the iteration is not important for-each loops are preffered.
 
@@ -394,7 +363,7 @@ When itereating over iterable elements where the current index in the iteration 
 	}	
 ```
 
-### 4.5. String concatenation
+### 4.5. *String* concatenation
 
 Avoid the use of + or += to concatenate strings. Use java standards designed for that purposes such as String.format, StringBuilder, etc.
 
@@ -485,7 +454,7 @@ List<String> people = Arrays.asList("you", "me");
 List people = Arrays.asList("you", "me");
 ```
 
-### 4.9. Use of 'final'
+### 4.9. Use of *final*
 
 When implementing services and classes that are more than javabeans or objects to transfer data between layers make sure you use the 'final' keyword to communicate your intention regarding subclassing, use of constants and values that once set should be immutable.
 
@@ -503,7 +472,7 @@ final int thisLocalVariableValueWillNeverChangeOnceSet = 0;
 
 ```
 
-### 4.10. Name return values 'result'
+### 4.10. Name return values *result*
 
 Consider using 'result' as the name for the returned variable. This eases the pain when debugging and increases code legibility.
 
