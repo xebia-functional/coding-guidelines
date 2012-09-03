@@ -6,7 +6,7 @@ Java applications developed at [47 Degrees](http://47deg.com) should follow the 
 
 [47 Degrees](http://47deg.com) uses the Java Programming Language and Java Related Technologies in different scenarios and applications. As a norm [47 Degrees](http://47deg.com)  follows industry standards and notifying of any deviation of this document from these standards will be welcomed.
 
-## 1. Rebel
+## 0. Rebel
 
 Do NOT blindly obey these guidelines, use them where they make sense.
 
