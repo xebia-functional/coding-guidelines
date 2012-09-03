@@ -6,6 +6,40 @@ Java applications developed at *47 Degrees* should follow the [Code Conventions 
 
 *47 Degrees* uses the Java Programming Language and Java Related Technologies in different scenarios and applications. As a norm *47 Degrees*  follows industry standards and notifying of any deviation of this document from these standards will be welcomed.
 
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Java Coding Standards](#java-coding-standards)
+	- [0. Rebel](#0-rebel)
+	- [1. General](#1-general)
+	- [2. Comments](#2-comments)
+	- [3. Copyrights](#3-copyrights)
+		- [3.1. Open Source](#31-open-source)
+		- [3.2. Propietary - Not Open Source](#32-propietary---not-open-source)
+		- [3.3. 3rd Parties](#33-3rd-parties)
+	- [4. Good Practices](#4-good-practices)
+		- [4.1. Design for interfaces](#41-design-for-interfaces)
+		- [4.2. Define Application Layers.](#42-define-application-layers)
+		- [4.3. Avoid multiple return statements](#43-avoid-multiple-return-statements)
+		- [4.4. Boolean comparisons](#44-boolean-comparisons)
+		- [4.5. for loops Vs for-each loops](#45-for-loops-vs-for-each-loops)
+		- [4.5. String concatenation](#45-string-concatenation)
+		- [4.6. Exceptions](#46-exceptions)
+		- [4.7. Collections](#47-collections)
+		- [4.8. Raw types](#48-raw-types)
+		- [4.9. Use of final](#49-use-of-final)
+		- [4.10. Name return values result](#410-name-return-values-result)
+		- [4.11. Consider setters and getters for field access](#411-consider-setters-and-getters-for-field-access)
+		- [4.12. Know your Java](#412-know-your-java)
+	- [5. Design Patterns](#5-design-patterns)
+		- [5.1. Abstract Factory](#51-abstract-factory)
+		- [5.2. Factory method](#52-factory-method)
+		- [5.3. Lazy Delegate Wrapper](#53-lazy-delegate-wrapper)
+		- [5.4. Singleton](#54-singleton)
+		- [5.5. Enums](#55-enums)
+		- [5.6. Private Helpers](#56-private-helpers)
+	- [6. Other Java Technologies](#6-other-java-technologies)
+	- [7. Active enforcement](#7-active-enforcement)
+
 ## 0. Rebel
 
 Do NOT blindly obey these guidelines, use them where they make sense.
