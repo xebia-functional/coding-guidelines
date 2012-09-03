@@ -424,3 +424,14 @@ Use the right collections for the right task.
 
 * Allows duplicates: [List](http://docs.oracle.com/javase/6/docs/api/java/util/List.html)
 * Does Not Allow Duplicates: [Set](http://docs.oracle.com/javase/6/docs/api/java/util/Set.html), [Map](http://docs.oracle.com/javase/6/docs/api/java/util/Map.html)
+
+**Implementations Iteration Order**
+
+* [HashSet](http://docs.oracle.com/javase/6/docs/api/java/util/HashSet.html) - undefined
+* [HashMap](http://docs.oracle.com/javase/6/docs/api/java/util/HashMap.html) - undefined
+* [LinkedHashSet](http://docs.oracle.com/javase/6/docs/api/java/util/LinkedHashSet.html) - insertion order
+* [LinkedHashMap](http://docs.oracle.com/javase/6/docs/api/java/util/LinkedHashMap.html) - insertion order of keys
+* [ArrayList](http://docs.oracle.com/javase/6/docs/api/java/util/ArrayList.html) - insertion order
+* [LinkedList](http://docs.oracle.com/javase/6/docs/api/java/util/LinkedList.html) - insertion order
+* [TreeSet](http://docs.oracle.com/javase/6/docs/api/java/util/TreeSet.html) - ascending order (Comparable / Comparator)
+* [TreeMap](http://docs.oracle.com/javase/6/docs/api/java/util/TreeMap.html) - ascending order of keys (Comparable / Comparator)
