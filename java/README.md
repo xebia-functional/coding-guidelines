@@ -639,6 +639,5 @@ public void downloadUrlContents(String url) {
 
 Other Java related technologies along with their specific coding guidelines covered as subsets of this document can be found at:
 
-* [Spring](android/)
-* [Spring MVC](android/)
-* [Android](android/)
+* [Spring](java/spring/)
+* [Android](java/android/)
