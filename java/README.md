@@ -451,23 +451,22 @@ List<String> people = Arrays.asList("you", "me");
 List people = Arrays.asList("you", "me");
 ```
 
-### 4.8. Enums
+### 4.8. Use of 'final'
 
-Constrain arguments by using type safe enumerations.
-
-**Correct:**
+When implementing services and classes that are more than javabeans or objects to transfer data between layers make sure you use the 'final' keyword to communicate your intention regarding subclassing, use of constants and values that once set should be immutable.
 
 ```java
-public enum Options {
-	YES, NO
+public final class ThisShouldNeverBeExtended {
+...
 }
-```
 
-**Incorrect:**
+public final neverOverrideThisMethod() {
+}
 
-```java
-String yes = "YES";
-String no = "NO";
+private final int thisFielfValueWillNeverChangeOnceSet;
+
+final int thisLocalVariableValueWillNeverChangeOnceSet = 0;
+
 ```
 
 ### 4.9. Design Patterns
@@ -550,4 +549,23 @@ public class Earth {
 	}
 
 }
+```
+
+#### 4.9.5. Enums
+
+Constrain arguments by using type safe enumerations.
+
+**Correct:**
+
+```java
+public enum Options {
+	YES, NO
+}
+```
+
+**Incorrect:**
+
+```java
+String yes = "YES";
+String no = "NO";
 ```
