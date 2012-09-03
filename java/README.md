@@ -4,7 +4,7 @@ The purpose of the [47 Degrees](http://47deg.com) Java Coding Standards is to cr
 
 Java applications developed at *47 Degrees* should follow the [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/codeconv-138413.html)
 
-[47 Degrees](http://47deg.com) uses the Java Programming Language and Java Related Technologies in different scenarios and applications. As a norm *47 Degrees*  follows industry standards and notifying of any deviation of this document from these standards will be welcomed.
+*47 Degrees* uses the Java Programming Language and Java Related Technologies in different scenarios and applications. As a norm *47 Degrees*  follows industry standards and notifying of any deviation of this document from these standards will be welcomed.
 
 ## 0. Rebel
 
@@ -634,3 +634,11 @@ public void downloadUrlContents(String url) {
 	... complex code to turn the remote response into bytes and then serialize to disk
 }
 ```
+
+## 5. Other Java Technologies
+
+Other Java related technologies along with their specific coding guidelines covered as subsets of this document can be found at:
+
+* [Spring](android/)
+* [Spring MVC](android/)
+* [Android](android/)
