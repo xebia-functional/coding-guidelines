@@ -146,7 +146,17 @@ Code owned and written for 3rd parties should be formatted in the following way.
 
 Good practice are a must at 47 Degrees. Code is periodically reviewed for both machines and humans to ensure code quality meets standards within the company.
 
-The fowllowing are a list of important code habits at 47 Degrees.
+Pay special atention to the most common style errors...
+
+* classes too long
+* methods too long
+* little or no javadoc comments
+* swallowing exceptions
+* multiple return statements
+* Overuse of arrays in place of collections
+* too much or no whitespace
+
+In the spirit of providing a guideline to avoid some of these errors and create better code the below listed points are cases with examples that should be considered at 47 Degrees.
 
 ### 4.1. Design for interfaces
 
