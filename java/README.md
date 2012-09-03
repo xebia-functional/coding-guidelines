@@ -415,3 +415,15 @@ Don't swallow exception, catch those you can recover or do something about, let 
 		//do nothing
 	} 
 ```
+
+### 4.7. Collections
+
+Use the right collections for the right task.
+
+**Duplicates**
+
+* Allows duplicates
+** [List](http://docs.oracle.com/javase/6/docs/api/java/util/List.html)
+* Does Not Allow Duplicates
+** [Set](http://docs.oracle.com/javase/6/docs/api/java/util/Set.html)
+** [Map](http://docs.oracle.com/javase/6/docs/api/java/util/Map.html)
