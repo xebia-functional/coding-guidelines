@@ -91,7 +91,7 @@ At *47 Degrees* comments in Java files should be written as [Doc Comments for th
 
 All Java files should contain the appropiate copyright notice at the beginning of the file. 
 
-### 3.1. 47 Open Source
+### 3.1. Open Source
 
 Open Source code written in *47 Degrees* that is open source is commonly released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and must be as follows.
 
@@ -115,7 +115,7 @@ Open Source code written in *47 Degrees* that is open source is commonly release
  */
  ```
 
-### 3.2. 47 Propietary - Not Open Source
+### 3.2. Propietary - Not Open Source
 
 Code owned and written for 47 Degrees not for open sourced projects must be as follows.
 
@@ -145,7 +145,7 @@ Code owned and written for 3rd parties should be formatted in the following way.
  */
  ```
 
-## 4. Good Practices and Coding Habits
+## 4. Good Practices
 
 Good practice are a must at *47 Degrees*. Code is periodically reviewed for both machines and humans to ensure code quality meets standards within the company.
 
@@ -206,7 +206,7 @@ public ArrayList<User> getFriends(User user) {
 }
 ```
 
-### 4.2. Design and Architect with clear differentiation of the Application layers.
+### 4.2. Define Application Layers.
 
 **Correct:**
 
