@@ -278,7 +278,7 @@ public ArrayList<User> getFriends(User user) {
  }
 ```
 
-### 4.3. Avoid multiple 'return' statements
+### 4.3. Avoid multiple *return* statements
 
 Multiple *return* statements are hard and time consuming to debug.
 
