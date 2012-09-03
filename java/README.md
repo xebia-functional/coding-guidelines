@@ -422,8 +422,5 @@ Use the right collections for the right task.
 
 **Duplicates**
 
-* Allows duplicates
-** [List](http://docs.oracle.com/javase/6/docs/api/java/util/List.html)
-* Does Not Allow Duplicates
-** [Set](http://docs.oracle.com/javase/6/docs/api/java/util/Set.html)
-** [Map](http://docs.oracle.com/javase/6/docs/api/java/util/Map.html)
+* Allows duplicates: [List](http://docs.oracle.com/javase/6/docs/api/java/util/List.html)
+* Does Not Allow Duplicates: [Set](http://docs.oracle.com/javase/6/docs/api/java/util/Set.html), [Map](http://docs.oracle.com/javase/6/docs/api/java/util/Map.html)
