@@ -29,6 +29,11 @@ Consider the following requirements.
  */
  public interface UserService {
 
+ 	/**
+	 * Persists a user
+	 *
+	 * @param  user the user to be persisted
+	 */
  	void save(User user);
 
  }
@@ -40,9 +45,17 @@ Consider the following requirements.
  @Service
  public class LocalUserServiceImpl implements UserService {
 
+ 	/**
+	 * A storage independent façade for object persistence
+	 */
  	@Autowired
  	private PersistenceAdapter persistenceAdapter;
 
+ 	/**
+	 * Persists a user
+	 *
+	 * @param  user the user to be persisted
+	 */
  	@Override
  	public void save(User user) {
  		persistenceAdapter.persist(user);
@@ -61,10 +74,17 @@ Consider the following requirements.
  @Service
  public class UserService {
 
+ 	/**
+	 * A storage independent façade for object persistence
+	 */
  	@Autowired
  	private PersistenceAdapter persistenceAdapter;
 
- 	@Override
+ 	/**
+	 * Persists a user
+	 *
+	 * @param  user the user to be persisted
+	 */
  	public void save(User user) {
  		persistenceAdapter.persist(user);
  	}
