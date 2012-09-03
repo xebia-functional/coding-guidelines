@@ -476,7 +476,7 @@ Consider the use of common design patterns.
 
 **Abstract Factory**
 
-Creates related object without knowledge of implementations, minimizing the refactoring effort and keeping implementation well defined and isolated into their classes.
+Creates or gets an object without knowledge of its implementations, minimizing the refactoring effort and keeping implementations well defined and isolated into their classes.
 
 ```java
 public interface PersistenceAdapter {
@@ -502,5 +502,12 @@ public class HectorCassandraPersistenceAdapterImpl implements CassandraPersisten
 //Obtains the current runtime impl for the persistence adapter.
 PersistenceAdapter persistenceAdapter = getPersistenceAdapter();
 persistenceAdapter.save(user);
+```
 
+**Factory methods**
+
+Use static factory methods in objects where you may not create a new instance every time or you can return a subtype of the declared return type
+
+```java
+Calendar.getInstance();
 ```
