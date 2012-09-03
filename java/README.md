@@ -434,4 +434,19 @@ Use the right collections for the right task.
 * [ArrayList](http://docs.oracle.com/javase/6/docs/api/java/util/ArrayList.html) - insertion order
 * [LinkedList](http://docs.oracle.com/javase/6/docs/api/java/util/LinkedList.html) - insertion order
 * [TreeSet](http://docs.oracle.com/javase/6/docs/api/java/util/TreeSet.html) - ascending order (Comparable / Comparator)
-* [TreeMap](http://docs.oracle.com/javase/6/docs/api/java/util/TreeMap.html) - ascending order of keys (Comparable / Comparator)
+
+### 4.8. Raw types
+
+Avoid using raw types when using classes that support generics.
+
+**Correct:**
+
+```java
+List<String> people = Arrays.asList("you", "me");
+```
+
+**Incorrect:**
+
+```java
+List people = Arrays.asList("you", "me");
+```
