@@ -511,3 +511,23 @@ Use static factory methods in objects where you may not create a new instance ev
 ```java
 Calendar.getInstance();
 ```
+
+**Lazy Delegate Wrapper**
+
+When coding classes that represent response objects utilized in Views or other parts of the system where a subset of the properties may not be used consider the use of lazy wrappers with delegates keeping in mind the Serialization requirements.
+
+```java
+public class UserResponse {
+	
+	private User delegate;
+
+	public UserResponse(User delegate) {
+		this.delegate = delegate;
+	}
+
+	public String getName() {
+		return delegate.getName();
+	}
+
+}
+```
