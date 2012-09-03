@@ -450,3 +450,22 @@ List<String> people = Arrays.asList("you", "me");
 ```java
 List people = Arrays.asList("you", "me");
 ```
+
+### 4.8. Enums
+
+Constraint arguments by using type safe enumerations.
+
+**Correct:**
+
+```java
+public enum Options {
+	YES, NO
+}
+```
+
+**Incorrect:**
+
+```java
+String yes = "YES";
+String no = "NO";
+```
