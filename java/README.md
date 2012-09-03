@@ -474,7 +474,7 @@ String no = "NO";
 
 Consider the use of common design patterns.
 
-**Abstract Factory**
+#### 4.9.1. Abstract Factory
 
 Creates or gets an object without knowledge of its implementations, minimizing the refactoring effort and keeping implementations well defined and isolated into their classes.
 
@@ -504,7 +504,7 @@ PersistenceAdapter persistenceAdapter = getPersistenceAdapter();
 persistenceAdapter.save(user);
 ```
 
-**Factory methods**
+#### 4.9.2. Factory method
 
 Use static factory methods in objects where you may not create a new instance every time or you can return a subtype of the declared return type
 
@@ -512,7 +512,7 @@ Use static factory methods in objects where you may not create a new instance ev
 Calendar.getInstance();
 ```
 
-**Lazy Delegate Wrapper**
+#### 4.9.3. Lazy Delegate Wrapper
 
 When coding classes that represent response objects utilized in Views or other parts of the system where a subset of the properties may not be used consider the use of lazy wrappers with delegates keeping in mind the Serialization requirements.
 
@@ -527,6 +527,26 @@ public class UserResponse {
 
 	public String getName() {
 		return delegate.getName();
+	}
+
+}
+```
+
+#### 4.9.4. Singleton
+
+Use a singleton to represent a service class where there should be a single instance in the whole system.
+There is usually no need for implementing this pattern manually in web and backends where instances are managed by Spring or other IOC container.
+
+```java
+public class Earth {
+	
+	private static Earth instance = new Earth();
+
+	private Earth() {		
+	}
+
+	public static Earth getInstance() {
+		return instance;
 	}
 
 }
