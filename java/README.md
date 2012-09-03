@@ -2,31 +2,24 @@
 
 The purpose of the [47 Degrees](http://47deg.com) Java Coding Standards is to create a collaboration baseline; helpful for scenarios where many people are creating, modifying, and contributing to the same project. The end goal is unity, consistency, and the notion that a single entity worked on the project.
 
-Java applications developed at [47 Degrees](http://47deg.com)  should follow the [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/codeconv-138413.html)
+Java applications developed at [47 Degrees](http://47deg.com) should follow the [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/codeconv-138413.html)
 
-[47 Degrees](http://47deg.com)  uses the Java Programming Language and Java Related Technologies in different scenarios and applications. As a norm [47 Degrees](http://47deg.com)  follows industry standards and notifying of any deviation of this document from these standards will be welcomed.
+[47 Degrees](http://47deg.com) uses the Java Programming Language and Java Related Technologies in different scenarios and applications. As a norm [47 Degrees](http://47deg.com)  follows industry standards and notifying of any deviation of this document from these standards will be welcomed.
 
-## Table of Contents
+## 1. Rebel
 
-1. [General](#section-general)
-2. [Comments](#section-comments)
-3. [Copyrights](#section-copyrights)
-4. [Good Practices and coding habits](#section-goodpractice)
+Do NOT blindly obey these guidelines, use them where they make sense.
 
-<a name="section-general"></a>
 ## 1. General
 
 * All code, regardless of who touches it, should look like a single person created it.
 * All culprits who ignore the aforementioned rule will be docked one pint of beer.
 
-<a name="section-comments"></a>
 ## 2. Comments
 
 Well documented Java code is as awesome as a [pizzokie](http://www.urbandictionary.com/define.php?term=pizzokie). We have all fallen victim to undocumented code; even being guilty of ignoring proper comments for our own code. Let's try and stop doing that.
 
-At [47 Degrees](http://47deg.com)  comments in Java files should be written as [Doc Comments for the Javadoc Tool](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
-
-An example of properly documented method method following the javadoc standard is shown below.
+At [47 Degrees](http://47deg.com) comments in Java files should be written as [Doc Comments for the Javadoc Tool](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
 
 **Correct:**
 
@@ -60,7 +53,6 @@ An example of properly documented method method following the javadoc standard i
  }
  ```
 
-<a name="section-copyrights"></a>
 ## 3. Copyrights
 
 All Java files should contain the appropiate copyright notice at the beginning of the file. 
@@ -119,10 +111,11 @@ Code owned and written for 3rd parties should be formatted in the following way.
  */
  ```
 
-<a name="section-goodpractice"></a>
 ## 4. Good Practices and coding habits
 
 Good practice are a must at 47 Degrees. Code is periodically reviewed for both machines and humans to ensure code quality meets standards within the company.
+
+The fowllowing are a list of important code habits at 47 Degrees.
 
 ### 4.1. Design for interfaces
 
@@ -626,7 +619,3 @@ public void downloadUrlContents(String url) {
 	... complex code to turn the remote response into bytes and then serialize to disk
 }
 ```
-
-### 6. Rebel
-
-Do NOT blindly obey these guidelines, use them where they make sense.
