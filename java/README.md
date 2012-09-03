@@ -483,7 +483,7 @@ public Object doSomething() {
 }
 ```
 
-### 4.11. Consider Setters and Getters for field access
+### 4.11. Consider setters and getters for field access
 
 Within the same class consider using getters and setter to access fields values to ensure lazy initialization and other intended logic implemented in getters and setters is always applied.
 
@@ -626,3 +626,7 @@ public void downloadUrlContents(String url) {
 	... complex code to turn the remote response into bytes and then serialize to disk
 }
 ```
+
+### 6. Rebel
+
+Do NOT blindly obey these guidelines, use them where they make sense.
