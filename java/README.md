@@ -635,7 +635,7 @@ public void downloadUrlContents(String url) {
 }
 ```
 
-## 5. Other Java Technologies
+## 6. Other Java Technologies
 
 Other Java related technologies along with their specific coding guidelines covered as subsets of this document can be found at:
 
