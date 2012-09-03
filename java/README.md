@@ -474,12 +474,32 @@ final int thisLocalVariableValueWillNeverChangeOnceSet = 0;
 Consider using 'result' as the name for the returned variable. This eases the pain when debugging and increases code legibility.
 
 ```java
-public Object do() {
+public Object doSomething() {
 	Object result = null;
 	if (something) {
 		result = new Object();
 	}
 	return result;
+}
+```
+
+### 4.11. Consider Setters and Getters for field access
+
+Within the same class consider using getters and setter to access fields values to ensure lazy initialization and other intended logic implemented in getters and setters is always applied.
+
+**Correct:**
+
+```java
+public void changeName(String name) {
+	setName(name);	
+}
+```
+
+**Incorrect:**
+
+```java
+public void changeName(String name) {
+	this.name = name;	
 }
 ```
 
