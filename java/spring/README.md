@@ -95,9 +95,9 @@ Consider the following requirements.
 ## 3. AOP
 
 [Spring AOP](http://static.springsource.org/spring/docs/3.0.x/reference/aop.html) is extensively used in server side Java based projects at *47 Degrees*.
-Developers should be aware that their method classes and method invokations may be decorated, intercepted, validated and that their service runtime instances may be [proxied](http://static.springsource.org/spring/docs/3.0.x/reference/aop.html#aop-understanding-aop-proxies). This is necessary to implement some of the AOP design patterns that are provided by Spring to implement Security, Transactions, Logging, Events, etc.
+Developers should be aware that their method classes and method invokations may be decorated, intercepted, validated and that their service runtime instances may be [proxied](http://static.springsource.org/spring/docs/3.0.x/reference/aop.html#aop-understanding-aop-proxies). This is necessary to implement some of the AOP design patterns that are provided by Spring to such as [Security](http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/access/annotation/Secured.html), [Transactions](http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/transaction.html#transaction-declarative-annotations), Logging, Events, etc.
 
-The [AspectJ Annotation](http://static.springsource.org/spring/docs/2.5.5/reference/aop.html#aop-ataspectj) style is preffered over other AOP flavores.
+The [AspectJ Annotation](http://static.springsource.org/spring/docs/2.5.5/reference/aop.html#aop-ataspectj) style is preffered over other AOP flavors.
 
 You can find AOP patterns in use across many layers. 
 
@@ -139,7 +139,6 @@ You can find AOP patterns in use across many layers.
 ```java
 	@Logger //injects the application logger into this service implementation
  	private Log logger;
- }
 ```
 
 ## 4. Spring MVC
