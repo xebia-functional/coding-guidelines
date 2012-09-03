@@ -453,7 +453,7 @@ List people = Arrays.asList("you", "me");
 
 ### 4.8. Enums
 
-Constraint arguments by using type safe enumerations.
+Constrain arguments by using type safe enumerations.
 
 **Correct:**
 
@@ -468,4 +468,39 @@ public enum Options {
 ```java
 String yes = "YES";
 String no = "NO";
+```
+
+### 4.9. Design Patterns
+
+Consider the use of common design patterns.
+
+**Abstract Factory**
+
+Creates related object without knowledge of implementations, minimizing the refactoring effort and keeping implementation well defined and isolated into their classes.
+
+```java
+public interface PersistenceAdapter {
+	...
+}
+
+public interface CassandraPersistenceAdapter extends PersistenceAdapter {	
+	...
+}
+
+public interface JPAPersistenceAdapter extends PersistenceAdapter {	
+	...
+}
+
+public class HibernateJPAPersistenceAdapterImpl implements JPAPersistenceAdapter {	
+	...
+}
+
+public class HectorCassandraPersistenceAdapterImpl implements CassandraPersistenceAdapter {	
+	...
+}
+
+//Obtains the current runtime impl for the persistence adapter.
+PersistenceAdapter persistenceAdapter = getPersistenceAdapter();
+persistenceAdapter.save(user);
+
 ```
