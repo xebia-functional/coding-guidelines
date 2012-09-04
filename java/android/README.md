@@ -42,8 +42,8 @@ The following structure should be followed when naming resoures.
 * **Group**: Application area or screen. If the resource is used in different parts of applications 'common' should be used instead. e.g. actionbar, menu, media, popup, footer, audio, etc.
 * **Type**: Resource Type. e.g. background, icon, button, textfield, list, menuitem, radiobutton, checkbox, tab, dialog, title, etc.
 * **Name**: Descriptive name as to what the resource is about. e.g. play, stop.
-* **State** (Optional): The optional state of a parent resource. e.g. A button could be in 'normal', 'pressed', 'disabled' and 'selected'. A checkbox could be 'on' or 'off'. These resources should NEVER be used directly in layout but rather as state selectors.
-* **Suffix** (Optional): An arbitrary suffix that helps to further identify a property of the resource. Ex: bright, dark, opaque, layer, etc.
+* **State**: (Optional): The optional state of a parent resource. e.g. A button could be in 'normal', 'pressed', 'disabled' and 'selected'. A checkbox could be 'on' or 'off'. These resources should NEVER be used directly in layout but rather as state selectors.
+* **Suffix**: (Optional): An arbitrary suffix that helps to further identify a property of the resource. e.g. bright, dark, opaque, layer.
 
 Below are some examples of properly named resources.
 
@@ -71,7 +71,12 @@ Below are some examples of properly named string identifiers.
 String resources placed in styles.xml are named in CamelCase.
 The following structure should be followed when naming style resoures.
 
-**Group**|**Type**|**Name**|*[Suffix]*
+**[Group]TypeName[Suffix]**
+
+* **Group** (Optional): Application area or screen. e.g. actionbar, menu, media, popup, footer, audio.
+* **Type**: Resource Type. e.g. Background, Icon, Button, Textfield, List, MenuItem, RadioButton, Checkbox, Tab, Dialog.
+* **Name**: Descriptive name as to what the resource is about. e.g. play, stop.
+* **Suffix**: (Optional): An arbitrary suffix that helps to further identify a property of the resource. e.g. Bright, Dark, Opaque, Layer.
 
 Below are some examples of properly named string identifiers.
 
