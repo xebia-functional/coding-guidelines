@@ -65,3 +65,16 @@ Below are some examples of properly named string identifiers.
 * phoneNumber
 * services
 * url
+
+## 1.4. Style Resources
+
+String resources placed in styles.xml are named in CamelCase.
+The following structure should be followed when naming style resoures.
+
+**Group**|**Type**|**Name**|*[Suffix]*
+
+Below are some examples of properly named string identifiers.
+
+* ButtonSend
+* ActionBarButtonBack
+* ListTitle
