@@ -54,3 +54,14 @@ Below are some examples of properly named resources.
 	- action_button_send_normal
 	- action_button_send_pressed
 	- action_button_send_disabled
+
+## 1.4. String Resources
+
+String resources placed in xml resources files such as strings.xml, config.xml, etc. are named following the same convention as Java naming conventions for variables and fields. CamelCase with the first letter lowercased.
+
+Below are some examples of properly named string identifiers.
+
+* serverApiUrl
+* phoneNumber
+* services
+* url
