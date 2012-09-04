@@ -38,7 +38,7 @@ Consider the following requirements.
 
  }
 
- /**
+/**
  * Implements the UserService utilizing the Persistence Adapter for storage persistence
  * @see UserService
  */
@@ -67,7 +67,7 @@ Consider the following requirements.
 **Incorrect:**
 
 ```java
- /**
+/**
  * Utilizes the Persistence Adapter for storage persistence
  * @see UserService
  */
@@ -143,6 +143,40 @@ You can find AOP patterns in use across many layers.
 
 ## 4. Spring MVC
 
+Spring MVC is utilized at *47 Degrees* for both building API's and Webapps.
+All classes exposed as Web or API controllers should include the [@Controller](http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/stereotype/Controller.html) annotation and be configured by using the [@RequestMapping](http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/web/bind/annotation/RequestMapping.html) annotations that determine which paths and variables are mapped to methods.
+
 ### 4.1. API's
+
+All API's Service should follow the same pattern described in the [Services](#2-services) section.
+Below is an example of an API service implementation that exposes a method at http(s)://host/api/vi1/users/{accessToken}/user/{userId}.
+
+```java
+/**
+ * Default impl for the UserAPI that maps url requests to methods
+ */
+@Controller
+@RequestMapping("/api/v1/users")
+public class UserAPIImpl implements UserAPI {
+	
+	@Autowired
+	private UserService userService;
+
+	/**
+	 * Fetches a user by id
+	 * This handler maps path variables to method arguments and returns a serialized representation of a UserResponse
+	 *
+	 * @param  accessToken the requesting user accessToken
+	 * @param  userId the id for the user being fetched
+	 */
+	@Override
+	@RequestMapping(value = "/{accessToken:.+}/user/{userId}", method = RequestMethod.GET)
+	public @ResponseBody UserResponse getAuthenticatedProfile(@PathVariable("accessToken") String accessToken, @PathVariable("userId") String userId) {
+		User requester = userService.getAccountForToken(accessToken);
+		User foundUser = userService.getUser(requester, userId);
+		return new UserResponse(foundUser);
+	}
+}
+```
 
 ### 4.2. JSP
