@@ -148,7 +148,7 @@ All classes exposed as Web or API controllers should include the [@Controller](h
 
 ### 4.1. API's
 
-All API's Service should follow the same pattern described in the [Services](#2-services) section.
+All API's Services should follow the same pattern described in the [Services](#2-services) section.
 Below is an example of an API service implementation that exposes a method at http(s)://host/api/vi1/users/{accessToken}/user/{userId}.
 
 ```java
@@ -179,4 +179,54 @@ public class UserAPIImpl implements UserAPI {
 }
 ```
 
-### 4.2. JSP
+### 4.2. Webapps
+
+Webapps controllers do not require to extend from a service interface as they are tightly coupled to the views they handle.
+Below is an example of an Web page implementation with its corresponding view
+
+```java
+/**
+ * User page
+ */
+@Controller
+@RequestMapping("/users")
+public class UserAPIImpl implements UserAPI {
+	
+	@Autowired
+	private UserService userService;
+
+	/**
+	 * Fetches a user by id
+	 * This handler maps path variables to method arguments and dispatch to the appropiate view setting the user model variable used to render the page
+	 *
+	 * @param  accessToken the requesting user accessToken
+	 * @param  userId the id for the user being fetched
+	 */
+	@Override
+	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
+	public ModelAndView getAuthenticatedProfile(ModelAndView mav, @PathVariable("userId") String userId) {
+		mav.setViewName("users");
+		User foundUser = userService.getUser(userId);
+		UserResponse userResponse = new UserResponse(foundUser);
+		mav.addObject("user", userResponse);
+		return mav;
+	}
+}
+```
+
+```jsp
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Users</title>
+</head>
+<body>
+	<div>${user.firstName}</div>
+</body>
+</html>
+```
