@@ -184,6 +184,8 @@ public class UserAPIImpl implements UserAPI {
 Webapps controllers do not require to extend from a service interface as they are tightly coupled to the views they handle.
 Below is an example of an Web page implementation with its corresponding view
 
+*Controller*
+
 ```java
 /**
  * User page
@@ -213,6 +215,8 @@ public class UserAPIImpl implements UserAPI {
 	}
 }
 ```
+
+*View*
 
 ```jsp
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
