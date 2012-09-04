@@ -4,6 +4,17 @@ The purpose of the [47 Degrees](http://47deg.com) Spring Coding Standards is to 
 
 This document, expected to be followed by any developers at 47 Degrees, is a subset and complement to the [Java Coding Standards](../).
 
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Spring Coding Standards](#spring-coding-standards)
+	- [1. Configuration](#1-configuration)
+	- [2. Services](#2-services)
+	- [3. AOP](#3-aop)
+	- [4. Spring MVC](#4-spring-mvc)
+		- [4.1. API's](#41-apis)
+		- [4.2. Webapps](#42-webapps)
+
+
 ## 1. Configuration
 
 Spring is the de facto IOC container used at *47 Degrees* for Java server side applications. 
