@@ -35,9 +35,9 @@ An android App should generally follow the following package structure
 
 ## 1.3. Resource Names
 
-The following structure should be followed when naming images in order to find and reuse resources fast and efficiently and avoid duplication across different layouts and components.
+The following structure should be followed when naming resoures.
 
-GROUP      TYPE      NAME      [STATE]      [SUFFIX]
+**group**_**type**_**name**_*[state]*_*[suffix]*
 
 * **Group**: Application area or screen. If the resource is used in different parts of applications 'common' should be used instead. e.g. actionbar, menu, media, popup, footer, audio, etc.
 * **Type**: Resource Type. e.g. background, icon, button, textfield, list, menuitem, radiobutton, checkbox, tab, dialog, title, etc.
