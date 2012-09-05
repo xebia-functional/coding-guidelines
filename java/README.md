@@ -185,7 +185,7 @@ In the spirit of providing a guideline to avoid some of these errors and create 
 
 ```java
  /**
- * Implements the UserService connecting and saving the user to the database
+ * Does not implements the UserService but connects and saves the user to the database
  * @see UserService
  */
  public class UserService {

@@ -4,6 +4,16 @@ The purpose of the [47 Degrees](http://47deg.com) Android Coding Standards is to
 
 This document, expected to be followed by any developers at 47 Degrees, is a subset and complement to the [Java Coding Standards](../).
 
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Android Coding Standards](#android-coding-standards)
+	- [1. Naming Conventions](#1-naming-conventions)
+	- [1.1. Common Resource Files](#11-common-resource-files)
+	- [1.2. Java Packages & Class Names](#12-java-packages--class-names)
+	- [1.3. Resource Names](#13-resource-names)
+	- [1.4. String Resources](#14-string-resources)
+	- [1.4. Style Resources](#14-style-resources)
+
 ## 1. Naming Conventions
 
 Developers should pay special attention to these naming conventions as they differ from those in the standard Java Coding Conventions.
