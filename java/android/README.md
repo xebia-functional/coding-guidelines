@@ -4,21 +4,11 @@ The purpose of the [47 Degrees](http://47deg.com) Android Coding Standards is to
 
 This document, expected to be followed by any developers at 47 Degrees, is a subset and complement to the [Java Coding Standards](../).
 
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [Android Coding Standards](#android-coding-standards)
-	- [1. Naming Conventions](#1-naming-conventions)
-	- [1.1. Common Resource Files](#11-common-resource-files)
-	- [1.2. Java Packages & Class Names](#12-java-packages--class-names)
-	- [1.3. Resource Names](#13-resource-names)
-	- [1.4. String Resources](#14-string-resources)
-	- [1.4. Style Resources](#14-style-resources)
-
 ## 1. Naming Conventions
 
 Developers should pay special attention to these naming conventions as they differ from those in the standard Java Coding Conventions.
 
-## 1.1. Common Resource Files
+### 1.1. Common Resource Files
 
 The folder *values* will have different files that will store information for our project. 
 Some of the most common files and their name are
@@ -30,7 +20,7 @@ Some of the most common files and their name are
 * **plurals.xml**: Plurals. Contains references to strings.xml
 * **arrays.xml**: Arrays. Contains references to strings.xml 
 
-## 1.2. Java Packages & Class Names
+### 1.2. Java Packages & Class Names
 
 An android App should generally follow the following package structure
 
@@ -43,7 +33,7 @@ An android App should generally follow the following package structure
 	- **fragments**: All Fragments with the word Fragment pre-fixed by the Fragment name: *[Name]*Fragment e.g. UserMapLocationFragment
 	- **utils**: All cross package utilities with the word Utils pre-fixed by the Utility name: *[Name]*Utils e.g. StringUtils
 
-## 1.3. Resource Names
+### 1.3. Resource Names
 
 The following structure should be followed when naming resoures.
 
@@ -65,7 +55,7 @@ Below are some examples of properly named resources.
 	- action_button_send_pressed
 	- action_button_send_disabled
 
-## 1.4. String Resources
+### 1.4. String Resources
 
 String resources placed in xml resources files such as strings.xml, config.xml, etc. are named following the same convention as Java naming conventions for variables and fields. CamelCase with the first letter lowercased.
 
@@ -76,7 +66,7 @@ Below are some examples of properly named string identifiers.
 * services
 * url
 
-## 1.4. Style Resources
+### 1.5. Style Resources
 
 String resources placed in styles.xml are named in CamelCase.
 The following structure should be followed when naming style resoures.
