@@ -9,6 +9,7 @@ This is a living document. The authors grow wiser with each passing day.
 1. [General](#section-general)
 2. [Comments](#section-comments)
 3. [Format](#section-format)
+4. [Selectors](#section-selectors)
 
 <a name="section-general"></a>
 ## 1. General
@@ -78,7 +79,8 @@ The first step to authoring consistent stylesheets begins with solid document st
 * Include a single space after the colon of a declaration.
 * Shorthand lowercase hex values (e.g. `#fff` not `#FFFFFF`).
 * Use single or double quotes consistently. Preference is double quotes (e.g. `content: "";` not `content: ''`).
-* Separate rulesets with a blank line.
+* Separate rulesets with *one* blank line.
+* Separate sections with *two* blank lines (e.g. two blank lines after the last ruleset before entering a new section comment).
 
 **Correct:**
 
@@ -95,3 +97,50 @@ The first step to authoring consistent stylesheets begins with solid document st
 ```css
 .selector-1, .selector-2 { background: #FFFFFF; color: #333333; }
 ```
+
+<a name="section-selectors"></a>
+## 4. Selectors
+
+Broad selectors are too easy to abuse and will likely result in head-banging frustration. Broad selectors (e.g. `nav a {}`) may be efficient in the interim, but likely to require overriding properties farther down the cascade. Careful planning can prevent such scenarios. Use your best judgment.
+
+* Use lowercase words separated by hyphens. Avoid underscores or camelcase formatting. *This may be unavoidable due to 3rd party scripts which inject CSS.*
+* We are humans, not robots. In addition to descriptive comments, selectors may be used to describe elements (e.g. `.lead-testimonial p {}` instead of `.boxed p {}`).
+* Double quotes for attribute selectors (e.g. `input[type="text"]` not `input[type='text']`).
+* Avoid over-qualified selectors (e.g. `.container {}` not `div.container{}`).
+
+**Correct:**
+
+```css
+.top-nav {
+	margin: 0;
+}
+
+input[type="text"] {
+	line-height: 1.2em;
+}
+```
+
+**Incorrect:**
+
+```css
+.topNav { /* Avoid camelcase */
+	margin: 0;
+}
+
+.top_nav { /* Avoid underscores */
+	margin: 0;
+}
+
+ul.top-nav { /* Avoid over-qualification */
+	margin: 0;
+}
+
+.tp-nv-r { /* Avoid robot speak */
+	margin: 0;
+}
+
+input[type=text] { /* Missing double quotes around attribute */
+	line-height: 1.2em;
+}
+```
+
