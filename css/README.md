@@ -11,6 +11,7 @@ This is a living document. The authors grow wiser with each passing day.
 3. [Format](#section-format)
 4. [Selectors](#section-selectors)
 5. [Properties](#section-properties)
+6. [Media Queries](#section-media-queries)
 
 <a name="section-general"></a>
 ## 1. General
@@ -193,4 +194,36 @@ Order vendor prefixed properties longest to shortest (e.g. `-webkit-*` to `unpre
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
+```
+
+<a name="section-media-queries"></a>
+## Media Queries
+
+Media queries allow for responsive layout changes for varying screen sizes, yet degrade gracefully for older browsers. Old browser = no fun responsive layout.
+
+* Prefer media queries be grouped and at the end of the stylesheet.
+* Indent rulesets one level within each media query section.
+
+The following breakpoints serve as reference only and *are not all* required for responsive projects.
+
+```css
+/* #Media Queries
+================================================== */
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+	/* Selectors here */
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
 ```
