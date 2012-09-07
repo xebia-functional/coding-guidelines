@@ -10,6 +10,7 @@ This is a living document. The authors grow wiser with each passing day.
 2. [Comments](#section-comments)
 3. [Format](#section-format)
 4. [Selectors](#section-selectors)
+5. [Properties](#section-properties)
 
 <a name="section-general"></a>
 ## 1. General
@@ -20,9 +21,9 @@ This is a living document. The authors grow wiser with each passing day.
 <a name="section-comments"></a>
 ## 2. Comments
 
-Well documented CSS is a double rainbow with unicorns dancing at the end near a leprechaun dance off around a pot 'o gold. We have all fallen victim to undocumented code; even being guilty of ignoring proper comments for our own code. Let's try and stop doing that.
+Well documented CSS is like a double rainbow; you just have to smile. We have all fallen victim to undocumented code from others; even being guilty of being too lazy to add our own comments to code. The mental statement "I'll add it later" is the precursor to "WTF, what is going on here". Let's avoid that.
 
-To alleviate the ho-hum repetitive nature of continuously entering comments, configure your text editor properly (e.g. Editor Snippets or [TextExpander](http://smilesoftware.com/TextExpander/)).
+To alleviate the ho-hum repetitive nature of entering properly formatted comments, configure your text editor (use your Editor Snippets or [TextExpander](http://smilesoftware.com/TextExpander/)).
 
 * Use a Table of Contents (TOC) at the top of the document.
 * Add a hashtag `#` to the opening section title e.g. `#Header`.
@@ -144,3 +145,52 @@ input[type=text] { /* Missing double quotes around attribute */
 }
 ```
 
+<a name="section-properties"></a>
+## Properties
+
+There is no true right or wrong method for property ordering, but given the oppotunity, who wouldn't attempt to instill a certain logical sense of order? Meaningful & semantic trumps random chaos. Try to order properties within rulesets using the following guide:
+
+1. Display
+2. Position
+3. Box Model
+4. Colors & Typography
+5. Other
+
+CSS3 or vendor prefixed properties would fall under *Other*.
+
+**Example:** *Inline comments for reference only*
+
+```css
+.navigation li {
+	/* Position */
+	position: absolute;
+	z-index: 1;
+	/* Box Model */
+	padding: 10px;
+	/* Colors & Typography */
+	background: #333;
+	color: #fff;
+}
+```
+
+Order vendor prefixed properties longest to shortest (e.g. `-webkit-*` to `unprefixed`). For multi line editing, align values with spaces.
+
+**Preferred:**
+
+```css
+.my-button {
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow:    0 1px 2px rgba(0,0,0,0.3);
+	box-shadow:         0 1px 2px rgba(0,0,0,0.3);
+}
+```
+
+**Not Preferred:**
+
+```css
+.my-button {
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+```
