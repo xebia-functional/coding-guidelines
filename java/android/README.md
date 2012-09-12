@@ -126,7 +126,9 @@ We should have some dimension in all projects by default. These are:
 
 ## 2. Conventions for devices 7 inches
 
-TODO
+We need some rules for the application works fine in 7 inches devices. The problem is that these devices usually use "mdpi" density.
 
-* All fonts sizes should be in dimen.xml file
-* Usually the dimensions will be a 150% in 7 inches dimen.xml file
+For this problem we create new resources for this devices.
+
+* Copy hdpi drawables to "drawable-sw600dp-mdpi", we want use image resources in hdpi in 7 inches devices
+* Create a new dimensions file for this screens. The file "dimen.xml" will be in "values-sw600dp-mdpi" folder. Usually the dimensions will be a 150%. All fonts sizes should be in dimen.xml file
