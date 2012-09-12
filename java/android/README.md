@@ -13,6 +13,8 @@ This document, expected to be followed by any developers at 47 Degrees, is a sub
 		- [1.3. Resource Names](#13-resource-names)
 		- [1.4. String Resources](#14-string-resources)
 		- [1.5. Style Resources](#15-style-resources)
+ 		- [1.6. Dimen Resources](#16-dimen-resources)
+	- [2. Conventions for devices 7 inches](#2-conventions-for-devices-7-inches)
 
 ## 1. Naming Conventions
 
@@ -93,3 +95,38 @@ Below are some examples of properly named string identifiers.
 * ButtonSend
 * ActionBarButtonBack
 * ListTitle
+
+### 1.6. Dimen Resources
+
+Dimens resources placed in dimen.xml. The following structure should be followed when naming dimentions.
+
+**property** _ **default** _ **group** _ **type** _ **name**
+
+* **property**: Type of property reference. e.g. font_size, padding, margin, height, width.
+* **default** (Optional): Write "default" if is a general dimen.
+* **group** (Optional): Application area or screen. e.g. action_bar, menu, popup, wizard.
+* **type** (Optional): Type of resource. e.g. button, title, text, edittext.
+* **name** (Optional): Only if is necessary.
+
+Below are some examples.
+
+* padding_default
+* font_size_action_bar_button
+* height_default_action_bar
+
+We should have some dimension in all projects by default. These are:
+
+* padding_default
+* margin_default
+* font_size_default_button
+* font_size_default_title
+* font_size_default_text
+* height_default_action_bar
+* font_size_default_action_bar
+
+## 2. Conventions for devices 7 inches
+
+TODO
+
+* All fonts sizes should be in dimen.xml file
+* Usually the dimensions will be a 150% in 7 inches dimen.xml file
