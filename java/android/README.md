@@ -124,11 +124,11 @@ We should have some dimension in all projects by default. These are:
 * height_default_action_bar
 * font_size_default_action_bar
 
-## 2. Conventions for devices 7 inches
+## 2. Conventions for 7" devices
 
-We need some rules for the application works fine in 7 inches devices. The problem is that these devices usually use "mdpi" density.
+7" devices require a special treatment. The problem is that these devices usually use "mdpi" as default density.
 
-For this problem we create new resources for this devices.
+These are the consideration to follow when targeting apps in these devices
 
-* Copy hdpi drawables to "drawable-sw600dp-mdpi", we want use image resources in hdpi in 7 inches devices
-* Create a new dimensions file for this screens. The file "dimen.xml" will be in "values-sw600dp-mdpi" folder. Usually the dimensions will be a 150%. All fonts sizes should be in dimen.xml file
+* Copy hdpi drawables to "drawable-sw600dp-mdpi".
+* Create a new dimensions file for this screens. The file "dimen.xml" will be in the "values-sw600dp-mdpi" folder. Usually the dimensions will be at 150%. All fonts sizes should be in dimen.xml file as well.
