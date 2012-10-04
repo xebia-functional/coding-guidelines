@@ -680,5 +680,6 @@ Other Java related technologies along with their specific coding guidelines cove
 
 Java developers at *47 Degrees* are expected to use tools that enforce some of these good practices and quality code in general.
 The de facto standard at 47 degrees for coding Java applications is the IDE [IntelliJ IDEA](http://www.jetbrains.com/idea/). Developers that want to further improve their code and have many of the guidelines in this document auto enforced may use [QAPlug](http://qaplug.com/) enabled as plugin within IDEA.
+In order to organize methods based on their visibility and name we use [Rearranger](http://plugins.intellij.net/plugin/?id=173). The latest company template to rearrange methods in classes is available for download in this project's [Download](https://github.com/47deg/coding-guidelines/downloads) section
 
 *47 Degrees* unapologetically favores the use of [IntelliJ IDEA](http://www.jetbrains.com/idea/) and other [products in the Jetbrains family](http://www.jetbrains.com/products.html) as standard tools for coding Java, ObjectiveC and other programming languages utilized at 47 Degrees.
