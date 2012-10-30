@@ -149,7 +149,7 @@ Code owned and written for 3rd parties should be formatted in the following way.
 
 Good practice are a must at *47 Degrees*. Code is periodically reviewed for both machines and humans to ensure code quality meets standards within the company.
 
-Pay special atention to the most common style errors...
+Pay special attention to the most common style errors...
 
 * classes too long
 * methods too long
